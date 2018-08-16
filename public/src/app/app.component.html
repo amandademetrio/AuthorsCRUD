@@ -1,0 +1,28 @@
+<div class="container mt-3 mb-3">
+
+  <div class="row">
+    <div class="col-12">
+      <h1 class="display-4 text-center">Authors</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/home']">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/add']">Add Author</a>
+            </li>
+          </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</div>

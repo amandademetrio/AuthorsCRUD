@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-12 mb-3">
+    <h3>Add New Author</h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <form (submit)="submitAuthor(newAuthor)">
+      <div class="form-group">
+        <label>Author Name:</label>
+          <input type="text" class="form-control" name="newAuthor.name" [(ngModel)]="newAuthor.name">
+          <div *ngIf="errors['name']" class="alert alert-danger mt-2" role="alert">
+            {{errors['name']['message']}}
+          </div>
+      </div>
+      <div class="form-group">
+        <label>Quote</label>
+          <textarea class="form-control" rows="3" name="newAuthor.quote" [(ngModel)]="newAuthor.quote"></textarea>
+          <div *ngIf="errors['quote']" class="alert alert-danger mt-2" role="alert">
+            {{errors['quote']['message']}}
+          </div>
+      </div>
+      <button type="submit" class="btn btn-primary float-right">Submit</button>
+    </form>
+  </div>
+</div>
